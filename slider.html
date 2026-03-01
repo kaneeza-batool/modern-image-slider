@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Image Slider</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #cd6590, #8d6375);
+  }
+
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .image-wrapper {
+    position: relative;
+  }
+
+  #slider {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+
+  .controls {
+    margin-top: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #753751;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    color: #753751;
+    background:  white;
+    transform: translateY(-3px);
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Modern Image Slider</h1>
+
+  <div class="image-wrapper">
+    <img src="" id="slider" />
+  </div>
+
+  <div class="controls">
+    <button class="btn" onclick="prevImage()">Prev</button>
+    <button class="btn" onclick="nextImage()">Next</button>
+  </div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
